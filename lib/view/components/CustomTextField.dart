@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class CustomTextField extends Container {
-  CustomTextField({String hint, String title})
+  CustomTextField(
+      {String hint,
+      String title,
+      TextEditingController controller,
+      bool obscureText = false})
       : super(
           margin: EdgeInsets.all(15.0),
           child: Column(
@@ -18,6 +22,8 @@ class CustomTextField extends Container {
                 ],
               ),
               TextField(
+                obscureText: obscureText,
+                controller: controller,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: hint,

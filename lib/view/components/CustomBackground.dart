@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class CustomBackground extends StatelessWidget {
   Widget _content;
+
   CustomBackground({Widget body}) {
     this._content = body;
   }
@@ -14,9 +15,7 @@ class CustomBackground extends StatelessWidget {
         title: Text('Teste'),
         leading: IconButton(
             icon: Icon(Icons.arrow_back),
-            onPressed: () => {
-                  // Chame o Navigator aqui para voltar a rota precedente
-                }),
+            onPressed: () => {Navigator.of(context).pop()}),
       ),
       backgroundColor: Colors.blue[200],
       body: Center(

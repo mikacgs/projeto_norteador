@@ -1,12 +1,12 @@
 import 'package:gestao_tads/view/cadastro.view.dart';
-import 'package:gestao_tads/view/components/CustomTextField.dart';
 import 'package:gestao_tads/view/grupos.view.dart';
 import 'package:gestao_tads/view/permissoes.view.dart';
 import 'package:flutter/material.dart';
 
 import 'components/CustomBackground.dart';
 import 'components/CustomButton.dart';
-import 'components/CustomTextArea.dart';
+import 'listaOrdems.view.dart';
+import 'novaOrdem.view.dart';
 
 class TelaPrincipal extends StatelessWidget {
   @override
