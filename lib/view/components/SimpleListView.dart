@@ -1,4 +1,3 @@
-import 'package:gestao_tads/model/permissao.dart';
 import 'package:flutter/material.dart';
 
 class SimpleListView extends Container {
