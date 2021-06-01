@@ -1,21 +1,30 @@
 class Usuario {
   int id;
   int id_grupo;
+  String senha;
   String usuario;
   String email;
   String cpf;
   String nascimento;
   String endereco;
 
+  Usuario(this.id, this.id_grupo, this.usuario, this.email, this.cpf,
+      this.nascimento, this.endereco);
+
+  Usuario.registrar(this.usuario, this.senha, this.email, this.cpf,
+      this.nascimento, this.endereco);
+
   Map toMap() {
-    Map map = Map();
-    map['id'] = id;
-    map['id_grupo'] = id_grupo;
-    map['usuario'] = usuario;
-    map['email'] = email;
-    map['cpf'] = cpf;
-    map['nascimento'] = nascimento;
-    map['endereco'] = endereco;
+    Map<String, dynamic> map = {
+      'id': id,
+      'id_grupo': id_grupo,
+      'senha': senha,
+      'usuario': usuario,
+      'email': email,
+      'cpf': cpf,
+      'nascimento': nascimento,
+      'endereco': endereco,
+    };
     return map;
   }
 
@@ -28,4 +37,5 @@ class Usuario {
     this.nascimento = map['nascimento'];
     this.endereco = map['endereco'];
   }
+
 }

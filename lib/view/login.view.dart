@@ -1,3 +1,5 @@
+import 'package:gestao_tads/control/LoginController.dart';
+import 'package:gestao_tads/model/usuario.dart';
 import 'package:gestao_tads/view/components/CustomTextField.dart';
 import 'package:gestao_tads/view/main.view.dart';
 import 'package:gestao_tads/view/registro.view.dart';
@@ -11,12 +13,13 @@ class TelaLogin extends StatefulWidget {
 }
 
 class _TelaLoginState extends State<TelaLogin> {
-  final userTextController = TextEditingController();
+  final emailTextController = TextEditingController();
+  final senhaTextController = TextEditingController();
 
   @override
   void dispose() {
 // Clean up the controller when the widget is disposed.
-    userTextController.dispose();
+    emailTextController.dispose();
     super.dispose();
   }
 
@@ -27,21 +30,25 @@ class _TelaLoginState extends State<TelaLogin> {
           child: Column(
         children: [
           CustomTextField(
-              title: 'Nome',
-              hint: 'Nome do usuário',
-              controller: userTextController),
+              title: 'E-mail ',
+              hint: 'email@dominio.com',
+              controller: emailTextController),
           CustomTextField(
             title: 'Senha',
             hint: 'Senha ...',
             obscureText: true,
+            controller: senhaTextController,
           ),
           Column(
             children: [
               CustomButton(
                 child: Text('Login'),
                 onPressed: () => {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => TelaPrincipal()))
+
+                  print(emailTextController.text),
+                  LoginController(
+                          emailTextController.text, senhaTextController.text)
+                      .autenticar(context)
                 },
                 style: CustomButton.SUCCESS,
               ),

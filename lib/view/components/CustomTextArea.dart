@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomTextArea extends Container {
-  CustomTextArea({String hint, String title})
+  CustomTextArea({String hint, String title, TextEditingController controller})
       : super(
           margin: EdgeInsets.all(15.0),
           child: Column(
@@ -18,6 +18,7 @@ class CustomTextArea extends Container {
                 ],
               ),
               TextField(
+                controller: controller,
                 maxLines: 8,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
