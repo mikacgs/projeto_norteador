@@ -20,6 +20,7 @@ class LoginController {
     } else if (autenticado == ApiController.ACESSO_NEGADO) {
       print("Usuário ou senha incorretos, tente novamente");
     } else {
+      print(autenticado);
       print("Há um problema com a nossa API tente novamente mais tarde");
     }
   }

@@ -20,7 +20,7 @@ class PersistenciaApi {
     //print("Fazendo a requisição GET");
 
     http.Response resposta = await http.get(
-        ApiController.getUriMika('ordemServico'),
+        ApiController.getURI('ordemServico'),
         //vou criar uma função assim pra nós ir separando em endpoints os controller
         headers: headers);
 

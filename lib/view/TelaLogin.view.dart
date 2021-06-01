@@ -2,7 +2,7 @@ import 'package:gestao_tads/control/LoginController.dart';
 import 'package:gestao_tads/model/usuario.dart';
 import 'package:gestao_tads/view/components/CustomTextField.dart';
 import 'package:gestao_tads/view/main.view.dart';
-import 'package:gestao_tads/view/registro.view.dart';
+import 'package:gestao_tads/view/TelaRegistroUsuario.view.dart';
 import 'package:flutter/material.dart';
 import 'components/CustomBackground.dart';
 import 'components/CustomButton.dart';
@@ -13,12 +13,13 @@ class TelaLogin extends StatefulWidget {
 }
 
 class _TelaLoginState extends State<TelaLogin> {
-  final emailTextController = TextEditingController();
+  // <<< Tem que seguir esse tipo aqui
+  final emailTextController =
+      TextEditingController(); //<<< passar os controllers de textEditing pra chamar as função e talz
   final senhaTextController = TextEditingController();
 
   @override
   void dispose() {
-// Clean up the controller when the widget is disposed.
     emailTextController.dispose();
     super.dispose();
   }
@@ -33,6 +34,7 @@ class _TelaLoginState extends State<TelaLogin> {
               title: 'E-mail ',
               hint: 'email@dominio.com',
               controller: emailTextController),
+          //<<<Tipo aqui, ai enquanto tu monta vou tentar resolver aquele erro do request
           CustomTextField(
             title: 'Senha',
             hint: 'Senha ...',
@@ -44,7 +46,6 @@ class _TelaLoginState extends State<TelaLogin> {
               CustomButton(
                 child: Text('Login'),
                 onPressed: () => {
-
                   print(emailTextController.text),
                   LoginController(
                           emailTextController.text, senhaTextController.text)

@@ -6,15 +6,11 @@ class OrdemServico {
   String descproblema;
   String senhaequip;
 
-  OrdemServico(
-      this.data,
-      this.status,
-      this.dataretirada,
-      this.descproblema,
+  OrdemServico(this.data, this.status, this.dataretirada, this.descproblema,
       this.senhaequip);
 
   OrdemServico.fromMap(Map map) {
-   // id = map["id"];
+    id = map["id"];
     data = map["data"];
     status = map["status"];
     dataretirada = map["dataretirada"];
@@ -24,7 +20,7 @@ class OrdemServico {
 
   Map<String, dynamic> toMap() {
     Map<String, dynamic> map = {
-     // "id": id != null ? id : "0",
+      "id": id != null ? id : "0",
       "data": data,
       "status": status,
       "dataretirada": dataretirada,

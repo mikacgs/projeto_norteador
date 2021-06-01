@@ -6,7 +6,7 @@ import 'components/CustomBackground.dart';
 import 'components/CustomButton.dart';
 import 'components/CustomButton.dart';
 import 'components/CustomTextArea.dart';
-import 'detalhesOrdem.view.dart';
+import 'TelaDetalhesOrdem.dart';
 
 
 class TelaListaOrdem extends StatelessWidget {

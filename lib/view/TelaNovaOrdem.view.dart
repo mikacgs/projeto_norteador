@@ -3,7 +3,7 @@ import 'package:gestao_tads/model/equipamento.dart';
 import 'package:gestao_tads/model/ordemServico.dart';
 import 'package:gestao_tads/view/components/CustomTextField.dart';
 import 'package:flutter/material.dart';
-import 'cadequipamento.dart';
+import 'TelaCadastroEquipamento.dart';
 import 'components/CustomBackground.dart';
 import 'components/CustomButton.dart';
 import 'components/CustomTextArea.dart';
@@ -49,13 +49,13 @@ class TelaNovaOrdenState extends State<TelaNovaOrden> {
                 onPressed: () => {
                   OSController().lancarOS(
                       OrdemServico(
-                          "04-05-2000",
+                          "2000-04-05",
                           "aberta",
-                          "04-05-2000",
+                          "2000-04-05",
                           descProblemaTextController.text,
                           senhaEquipamentoTextController.text),
                       Equipamento(modeloEquipamentoTextController.text,
-                          serialEquipamentoTextController.text, 00))
+                          int.parse(serialEquipamentoTextController.text), 00))
                 },
                 style: CustomButton.SUCCESS,
               ),

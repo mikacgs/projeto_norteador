@@ -9,15 +9,12 @@ import 'ApiController.dart';
 class OSController {
   Future<bool> _adicionarEquipamento(
       OrdemServico ordem, Equipamento equipamento) async {
-    String id_ordem = ordem.id.toString(); //pega o id da ordem do guilherme
-    String endpoint =
-        "ordem_servico/$id_ordem/equipamentos"; //joga no endpoint pra url
-    Response response = await ApiController.instance().post(
-        endpoint,
-        equipamento
-            .toMap()); //chama o post que eu simplifiquei lá puxando o token sozinho
-    //Teoricamente o post na api vai ser isso kkkkkkk
-    print("Resposta "+response.body);
+    String id_ordem = ordem.id.toString();
+    String endpoint = "/equipamentos";
+    print(endpoint);
+    Response response =
+        await ApiController.instance().post(endpoint, equipamento.toMap());
+    print("Resposta " + response.statusCode.toString());
 
     if (response.statusCode == 201) {
       return true;
@@ -29,7 +26,6 @@ class OSController {
   Future<OrdemServico> _adicionarOS(OrdemServico ordem) async {
     Response response =
         await ApiController.instance().post("ordem_servico", ordem.toMap());
-    print("Resposta "+response.body);
     if (response.statusCode == 201) {
       return OrdemServico.fromMap(json.decode(response.body));
     } else {
@@ -39,6 +35,7 @@ class OSController {
 
   Future<bool> lancarOS(OrdemServico os, Equipamento equipamento) async {
     OrdemServico ordem = await _adicionarOS(os);
+    print("Os atual:" + ordem.toMap().toString());
     if (ordem != null) {
       return await _adicionarEquipamento(ordem, equipamento);
     } else {

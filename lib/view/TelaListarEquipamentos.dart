@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'cadequipamento.dart';
+import 'TelaCadastroEquipamento.dart';
 import 'components/CustomBackground.dart';
 import 'components/CustomButton.dart';
 import 'components/CustomTextField.dart';

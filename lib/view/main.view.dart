@@ -1,14 +1,12 @@
-import 'package:gestao_tads/view/cadastro.view.dart';
-import 'package:gestao_tads/view/grupos.view.dart';
-import 'package:gestao_tads/view/permissoes.view.dart';
 import 'package:flutter/material.dart';
+import 'package:gestao_tads/view/TelaCadastroUsuario.view.dart';
+import 'package:gestao_tads/view/TelaListarGrupos.view.dart';
+import 'package:gestao_tads/view/TelaListarPermissoes.view.dart';
 
-import 'Equipamentos.dart';
-import 'cadequipamento.dart';
+import 'TelaListarOrdem.view.dart';
+import 'TelaNovaOrdem.view.dart';
 import 'components/CustomBackground.dart';
 import 'components/CustomButton.dart';
-import 'listaOrdems.view.dart';
-import 'novaOrdem.view.dart';
 
 class TelaPrincipal extends StatelessWidget {
   @override
@@ -52,26 +50,10 @@ class TelaPrincipal extends StatelessWidget {
                 style: CustomButton.SUCCESS,
               ),
               CustomButton(
-                child: Text('CADASTRAR NOVA ORDENS'),
+                child: Text('CADASTRAR ORDEM'),
                 onPressed: () => {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => TelaNovaOrden()))
-                },
-                style: CustomButton.SUCCESS,
-              ),
-              CustomButton(
-                child: Text('CADASTRAR EQUIPAMENTO'),
-                onPressed: () => {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => CadEquip()))
-                },
-                style: CustomButton.SUCCESS,// vai largando comentario aqui kkkk dps a gente só apaga
-              ),
-              CustomButton(
-                child: Text('EQUIPAMENTOS'),
-                onPressed: () => {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Equipamentos()))
                 },
                 style: CustomButton.SUCCESS,
               ),

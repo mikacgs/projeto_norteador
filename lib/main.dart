@@ -1,8 +1,8 @@
-import 'package:gestao_tads/view/cadastro.view.dart';
+import 'package:gestao_tads/view/TelaCadastroUsuario.view.dart';
 
 import 'package:gestao_tads/model/gestao.dart';
-import 'package:gestao_tads/view/login.view.dart';
-import 'package:gestao_tads/view/permissoes.view.dart';
+import 'package:gestao_tads/view/TelaLogin.view.dart';
+import 'package:gestao_tads/view/TelaListarPermissoes.view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -47,5 +47,4 @@ no slide de requisições http no moodle mostra que tem que fazer uma import
 Acho que foi agora
 Vamos fazer uma classe só pra controlar os request ou fazer separado por endpoint ??
 como tu achar melhor cara
-
  */
