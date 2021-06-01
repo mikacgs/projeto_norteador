@@ -4,6 +4,7 @@ import 'package:gestao_tads/view/main.view.dart';
 import 'package:gestao_tads/view/permissoes.view.dart';
 import 'package:flutter/material.dart';
 import 'package:gestao_tads/view/components/CustomTextField.dart';
+import 'package:http/http.dart' as http;
 
 import 'components/CustomBackground.dart';
 import 'components/CustomButton.dart';
