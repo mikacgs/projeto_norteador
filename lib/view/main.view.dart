@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:gestao_tads/control/CadastroUsuarioController.dart';
 import 'package:gestao_tads/view/TelaCadastroUsuario.view.dart';
 import 'package:gestao_tads/view/TelaListarGrupos.view.dart';
 import 'package:gestao_tads/view/TelaListarPermissoes.view.dart';
+import 'package:gestao_tads/view/TelaListarUsuarios.view.dart';
 
 import 'TelaListarOrdem.view.dart';
 import 'TelaNovaOrdem.view.dart';
@@ -54,6 +56,14 @@ class TelaPrincipal extends StatelessWidget {
                 onPressed: () => {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => TelaNovaOrden()))
+                },
+                style: CustomButton.SUCCESS,
+              ),
+              CustomButton(
+                child: Text('Testar função'),
+                onPressed: () => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => TelaUsuario()))
                 },
                 style: CustomButton.SUCCESS,
               ),
